@@ -76,11 +76,14 @@ const CartItem = ({ item }) =>
         }
       }).then((newComment) => {
 
-        console.log("&&&&&&&&&&&&comments", newComment)
+        console.log("&&&&&&&&&&&&comments", newComment);
+
+        const id= newComment.data.addComment.productId;
+        const text = newComment.data.addComment.text;
   
-        setComments ([...comments, newComment]);
-        e.target[0].value = '';
+        setComments ([...comments, { id, text}]);
       }) ;
+      e.target[0].value = '';
 
       
       /* dispatch(
