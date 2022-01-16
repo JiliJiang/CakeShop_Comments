@@ -1,0 +1,46 @@
+
+.tag{
+  margin:0;
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-bottom:40px;
+
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+
+.tag-Input{
+  width: 200px;
+  height: 50px; 
+  margin:0%;
+
+}
+
+.tag-form{
+  margin-left: 0;
+  padding-left:0;
+ 
+}
+
+.tagGroup{
+  width: 100%;
+  margin: 0;
+  padding-left: 0%;
+  padding-right:0%
+}
+
+
+.tagText{
+  width: 100%;
+  margin: 1%;
+  text-align: left;
+  line-height: 1.1;
+  font-size: 16px;
+  margin-left: 1%
+  
+
+}
