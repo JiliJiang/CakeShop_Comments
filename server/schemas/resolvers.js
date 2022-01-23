@@ -66,6 +66,14 @@ const resolvers = {
     },
 
     
+    comments: async (parent, args, context) => {
+      if (context.user) {
+        return await Comment.find();
+      }
+
+      throw new AuthenticationError("Not logged in");
+    },
+
 
     checkout: async (parent, args, context) => {
       

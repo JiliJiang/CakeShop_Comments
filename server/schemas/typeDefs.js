@@ -13,7 +13,7 @@ const typeDefs = gql`
     image: String
     quantity: Int
     price: Float
-    comments: [String]
+    
     category: Category
   }
 
@@ -56,7 +56,7 @@ const typeDefs = gql`
     product(_id: ID!): Product
     user: User
     order(_id: ID!): Order
-    
+    comments: [Comment]
     checkout(products: [ID]!): Checkout
   }
 
