@@ -21,8 +21,6 @@ function OrderHistory()
     comments=myNewComments;
     console.log("******comments", comments);
   } 
-  
- 
 
   const { data } = useQuery(QUERY_USER);
   let user;
@@ -60,34 +58,32 @@ function OrderHistory()
                         <img alt={name} src={`/images/${image}`} />
                         <p>{name}</p>
                         <p className="text-history">{description}</p>
-
                       </Link>
+                    
                     <div>
                         <span>Price: ${price}</span>
                     </div>
-                    < br/>
+            
+                    <h2>Comments</h2>
+                      {
+                        comments.length > 0 && comments? 
+                        ( comments.filter ((comment) => comment.productId === _id)
+                        .map((comment)=>
+                          <div key={comment._id}>
+                          <h3>{comment.text}</h3>
+                          </div>)
+                        ): 
+                        <h3>There is no comments</h3>}
+                  
+                
                 </div>
-                  ))}
-                 
-              </div>
-                   
-              </div>
+              ))}
+            </div>                  
+            </div>
             ))}
           </>
         ) : null}
       </div>
-
-      <div>
-        <h2>Comments</h2>
-        {comments.map((comment) => (
-          <div key={comment._id}>
-            <h3>{comment.text}</h3>
-          </div>
-        
-          ))}
-      </div>
-
-      
     </>
   );
 }

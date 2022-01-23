@@ -60,15 +60,7 @@ const CartItem = ({ item }) =>
   {
     if (e.target[0].value !== "")
     {
-      
-      //setComments([...comments, { productId: _id, text: e.target[0].value }]);
-
-      //const targetComments = comments.filter((comment) => comment.id === _id);
-      //console.log("************", targetComments)
-
-      //const newComment = { productId: _id, text: e.target[0].value };
-
-      
+           
       addComment({
         variables: {
           productId: _id, 
@@ -84,24 +76,7 @@ const CartItem = ({ item }) =>
         setComments ([...comments, { id, text}]);
       }) ;
       e.target[0].value = '';
-
-      
-      /* dispatch(
-        {
-          type: UPDATE_CART_COMMENTS,
-          _id: _id,
-          comments: [...comments, newComment]
-        });  */
-
-        //idbPromise('cart', 'put', { ...item, comments: comments });
-        //console.log("******",state);
-        //get product idbPromise
-        //find the product in the state
-        //const targetProduct = state.products.filter((product) => product._id===_id)[0];
-        //targetProduct.comments = [newComment]; 
-        //update db entry
-        //updateProduct (_id, targetProduct.quantity, targetProduct.comments);
-        
+     
        
     }
     };

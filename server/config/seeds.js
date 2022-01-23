@@ -145,11 +145,10 @@ db.once('open', async () =>
   });
 
 
-
   console.log('users seeded');
 
 
-  await Comment.deleteMany();
+  /* await Comment.deleteMany();
 
   await Comment.create({
     text: 'comment comment comment',
@@ -157,9 +156,7 @@ db.once('open', async () =>
   
   });
 
-
-
-  console.log('comments seeded');
+  console.log('comments seeded'); */
 
   process.exit();
 });
