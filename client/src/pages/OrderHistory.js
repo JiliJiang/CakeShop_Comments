@@ -4,37 +4,31 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_COMMENTS} from '../utils/queries';
 
-import {useState, useEffect} from 'react';
+
 
 function OrderHistory()
 
 {  
-  const [myComments, setMyComments] = useState([{_id:"01",text:"This is fake comment!!!!"}]);
-
-  
+    
   const commentRes = useQuery(QUERY_COMMENTS);
-  console.log("******", commentRes.data);
+  
   let comments = [];
+  
   if (commentRes.data)
   {
     const myComments = commentRes.data;
     const myNewComments = myComments.comments;
-    comments.push(myNewComments);
+    comments=myNewComments;
     console.log("******comments", comments);
   } 
   
-  useEffect(
-    ()=>{
-      setMyComments([...myComments, comments])
-    }, []
-  )
-  
+ 
+
   const { data } = useQuery(QUERY_USER);
   let user;
   if (data)
   {
     user = data.user;
-    console.log("*******&&&&&&", user)
   }
 
   return (
@@ -85,7 +79,7 @@ function OrderHistory()
 
       <div>
         <h2>Comments</h2>
-        {myComments.map((comment) => (
+        {comments.map((comment) => (
           <div key={comment._id}>
             <h3>{comment.text}</h3>
           </div>
