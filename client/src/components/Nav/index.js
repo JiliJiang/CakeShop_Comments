@@ -48,7 +48,7 @@ function Nav()
       <h1>
         <Link to="/">
           <p className="title"><span role="img" aria-label="shopping bag">🍰 </span>
-          - Extraordinary Cakes</p>
+          - My Sweet Cake Shop </p>
         </Link>
       </h1>
 

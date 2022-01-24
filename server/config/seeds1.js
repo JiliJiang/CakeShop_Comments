@@ -22,31 +22,13 @@ db.once('open', async () =>
       name: 'A',
       description:
         'The cake flavor is vanilla cake and sprinkles mixed in. It is two dense layers of buttery, vanilla-forward white cake wrapped in classically rich buttercream frosting',
-      image: 'birthday4.png',
-      category: categories[0]._id,
-      price: 10.99,
-      quantity: 1
-    },
-    {
-      name: 'B',
-      description:
-        'Three-layer white cake featuring delectable buttercream frosting & filling, festive confetti sprinkles, and an edible “Happy Birthday” sign on top. Arrives in an elegant gift box and includes a greeting card that you can personalize online. Decorate your cake with the name of your recipient by typing it in the Personalization field.',
-      image: 'birthday3.png',
-      category: categories[0]._id,
-      price: 9.99,
-      quantity: 1
-    },
-    {
-      name: 'Y',
-      description:
-        'The cake flavor is vanilla cake and sprinkles mixed in. It is two dense layers of buttery, vanilla-forward white cake wrapped in classically rich buttercream frosting',
       image: 'birthday1.png',
       category: categories[0]._id,
       price: 20.99,
       quantity: 1
     },
     {
-      name: 'X',
+      name: 'B',
       description:
         'Three-layer white cake featuring delectable buttercream frosting & filling, festive confetti sprinkles, and an edible “Happy Birthday” sign on top. Arrives in an elegant gift box and includes a greeting card that you can personalize online. Decorate your cake with the name of your recipient by typing it in the Personalization field.',
       image: 'birthday2.png',

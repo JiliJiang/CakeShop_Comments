@@ -37,10 +37,10 @@ body {
 .title{
   font-weight:bold;
   font-family: fantasy;
-  color:orange;
+  color:rgba(214, 18, 18, 0.767);
   font-size:34px;
   margin-bottom:0;
-  background-color: rgb(90, 7, 21);
+  background-color: rgb(209, 167, 174);
   margin-top: 5px;
 }
 
